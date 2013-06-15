@@ -1,0 +1,72 @@
+<div class="calculator">
+    <div class="row">
+        <div class="span3">
+            <h1>Калькулятор</h1>
+        </div>
+        <div class="clear"></div>
+         <div class="span6 ">
+            <div class="hero-unit">
+                <label for="type">Введіть кількість візиток
+                <input type="text" name="count" id="count" value="100"/>
+                </label>
+            </div>
+        </div>
+        <div class="span6 ">
+            <div class="hero-unit">
+                <label for="paper">Оберіть тип паперу
+                    <select name="paper" id="paper">
+                        <?php foreach ($this->papers as $key => $paper): ?>
+                            <option value="<?php echo $paper['price'] ?>"><?php echo $paper['title'] ?> - <span id="paper_<?php echo $key ?>"><?php echo $paper['price'] ?></span> грн/шт.</option>
+                        <?php endforeach ?>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <div class="hero-unit">
+                <label for="paint">Оберіть тип фарби
+                    <select name="paint" id="paint">
+                        <?php foreach ($this->paint as $key => $paint): ?>
+                            <option value="<?php echo $paint['price'] ?>"><?php echo $paint['title'] ?> - <span id="paint_<?php echo $key ?>"><?php echo $paint['price'] ?></span> грн/шт.</option>
+                        <?php endforeach ?>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="hero-unit">
+                <span>Вартість:</span>
+                <span id="price"><?php echo $this->price ?></span> грн.
+            </div>
+        </div>
+    </div>
+<div>
+<script>
+    $("#count").change(function(){
+        var paper = parseFloat($("#paper option:selected").val());
+        var paint = parseFloat($("#paint option:selected").val());
+        var count = parseInt($("#count").val());
+
+        var price = (  paper + paint ) * count;
+        $("#price").text(price.toFixed(2));
+    })
+    $("#paper").change(function(){
+        var paper = parseFloat($("#paper option:selected").val());
+        var paint = parseFloat($("#paint option:selected").val());
+        var count = parseInt($("#count").val());
+
+        var price = (  paper + paint ) * count;
+        $("#price").text(price.toFixed(2));
+    })
+    $("#paint").change(function(){
+        var paper = parseFloat($("#paper option:selected").val());
+        var paint = parseFloat($("#paint option:selected").val());
+        var count = parseInt($("#count").val());
+
+        var price = (  paper + paint ) * count;
+        $("#price").text(price.toFixed(2));
+    })
+    
+</script>
