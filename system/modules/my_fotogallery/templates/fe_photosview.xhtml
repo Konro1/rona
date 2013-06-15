@@ -1,16 +1,29 @@
 <div class="row">
-    <h3><?php echo $this->photos['title'] ?></h3>
+    <div class="span3">
+        <h3><?php echo $this->photos['title'] ?></h3>
+    </div>
     <div class="span12">
         <?php if (!empty($this->photos)): ?>
-        <div class="row">
+        <div class="row gallery">
             <?php foreach ($this->photos['photo'] as $key => $value): ?>
                 <div class="span4">
                     <div class="hero-unit">
-                  <a href="<?php echo $value ?>" rel="lightbox"><img src="<?php echo $value; ?>" alt=""/></a>
+                            <ul class="thumbnails">
+                                <li class="span3">
+                                    <a class="thumbnail" rel="lightbox[group]" href="<?php echo $value ?>">
+                                        <img class="group1" src="<?php echo $value ?>" alt="<?php echo $this->photos['title'] ?>">
+                                    </a>
+                                </li>
+                            </ul>
                     </div>
                 </div>
             <?php endforeach ?>
-            </div>
+        </div>
         <?php endif ?>
     </div>
 </div>
+<link rel="stylesheet" href="system/modules/my_fotogallery/assets/css/prettyPhoto.css" type="text/css" media="screen" />
+<script type="text/javascript" src="system/modules/my_fotogallery/assets/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+$("[rel^='lightbox']").prettyPhoto();
+</script>

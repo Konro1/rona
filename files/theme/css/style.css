@@ -43,7 +43,7 @@
 
 #wrapper,
 .container {
-	background-color: rgb(230, 230, 230);
+	background: url(/files/theme/img/bg.jpg);
 }
 
 .sliderImg {
@@ -105,5 +105,23 @@
 	color: white;
 }
 .navbar .brand {
+	color: white;
+}
+.ltblue,
+.calculator .hero-unit{
+	min-height: 45px;
+	background: #4b86d0;
+	border: 1px solid white;
+	-moz-box-shadow: 0 0  10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.button-padding{
+	display: block;
+	padding-bottom: 100px;
+}
+.footer .well{
+	background: #2E3844;
 	color: white;
 }
