@@ -1,0 +1,11 @@
+<div>
+    <?php if(!empty($this->data)): ?>
+        <ul>
+            <?php foreach($this->data["photos"] as $photo): ?>
+
+              <li><img src="<?php echo $photo; ?>"/></li>
+                
+            <?php endforeach; ?>
+        </ul>   
+    <?php endif; ?>
+</div>

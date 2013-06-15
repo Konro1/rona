@@ -1,0 +1,16 @@
+<div class="row">
+    <h3><?php echo $this->photos['title'] ?></h3>
+    <div class="span12">
+        <?php if (!empty($this->photos)): ?>
+        <div class="row">
+            <?php foreach ($this->photos['photo'] as $key => $value): ?>
+                <div class="span4">
+                    <div class="hero-unit">
+                  <a href="<?php echo $value ?>" rel="lightbox"><img src="<?php echo $value; ?>" alt=""/></a>
+                    </div>
+                </div>
+            <?php endforeach ?>
+            </div>
+        <?php endif ?>
+    </div>
+</div>

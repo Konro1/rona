@@ -14,13 +14,34 @@
 }
 
 .header {
-	background-color: #0044cc;
+	background: #1e5799; /* Old browsers */
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#1e5799), color-stop(0.37, #2989d8), color-stop(0.66, #207cca), to(#1e5799));
+	background: -webkit-linear-gradient(#1e5799 0%, #2989d8 37%, #207cca 66%, #1e5799 100%);
+	background: -moz-linear-gradient(#1e5799 0%, #2989d8 37%, #207cca 66%, #1e5799 100%);
+	background: -o-linear-gradient(#1e5799 0%, #2989d8 37%, #207cca 66%, #1e5799 100%);
+	background: linear-gradient(#1e5799 0%, #2989d8 37%, #207cca 66%, #1e5799 100%); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 1px solid black;
+	-moz-box-shadow: 0 0  10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
+
+#logo{
+	width: 150px;
+}	
 
 .header a {
 	color: rgb(230, 230, 230);
 }
 
+#wrapper,
 .container {
 	background-color: rgb(230, 230, 230);
 }
@@ -38,7 +59,7 @@
 	top:0;
 	right: 5%;
 	color: black;
-	background-color: white;
+	background-color: #2E3844;
 	
 }
 
@@ -68,4 +89,21 @@
 	border: 1px solid #333;
 	margin: 2px;
 	background-color: rgb(230, 230, 230);
+}
+
+.navbar-inner {
+	color: white;
+	background: #2E3844;
+	border: 3px solid white;
+	outline: 1px solid black;
+	box-shadow:2px 2px 5px #000000;
+}
+.sibling {
+	color: white;
+}
+.navbar .nav > li > a {
+	color: white;
+}
+.navbar .brand {
+	color: white;
 }

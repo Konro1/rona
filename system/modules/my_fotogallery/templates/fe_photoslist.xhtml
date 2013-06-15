@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="span12">
+        <?php if (!empty($this->categories)): ?>
+        <div class="row">
+            <?php $i = 0; foreach ($this->categories as $key => $value): ?>
+                <div class="span4">
+                    <div class="hero-unit">
+                        <a href="<?php echo $value['href'] ?>"><p><?php echo $value['title'] ?></p></a>
+                        <a href="<?php echo $value['href'] ?>"><img src="<?php echo $value['photo']; ?>" alt=""/></a>
+                    </div>
+                </div>
+            <?php endforeach ?>
+            </div>
+        <?php endif ?>
+    </div>
+</div>
